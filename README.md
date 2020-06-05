@@ -1,5 +1,2 @@
 # Smart Visitor Management Team
-## Hackathon 2020
-
-
-
+## don't read this it is not important
