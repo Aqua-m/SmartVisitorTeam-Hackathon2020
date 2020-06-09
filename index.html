@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>LocalGuide</title>
-        <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOK1SDlj9VUtdHahAP6XF_KzbQKwSEUpw&callback=initMap&libraries=&v=weekly" defer></script>
-        <style type="text/css">
-
-        /* Makes the map fill the entire "map" div. */ 
-        #map {
-        height: 100%;
-        }
-
-        html, body {
-        height: 100%;
-        margin: 0;
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ArcGIS JavaScript Tutorials: Create a JavaScript starter app</title>
+    <style>
+      html, body, #viewDiv {
         padding: 0;
-        }
-        
-        </style>
-        <script>
-        (function(exports) {
-            "use strict";
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
 
-        function initMap() {
-            exports.map = new google.maps.Map(document.getElementById("map"), {
-            center: {
-                lat: -43.5321,
-                lng: 172.6362
-            },
-            zoom: 13
-            });
-            
-            var aPlace = new google.maps.Marker({
-            position: {lat: -43.532623, lng: 172.685262},
-            map: map,
-            clickable: true
-			
-			//to do in future
-            //icon: image
-			//onclick/onmouseover: function
-            });
-			
-			var anotherPlace = new google.maps.Marker({
-            position: {lat: -43.535670, lng: 172.618425},
-            map: map,
-            clickable: true
-            });
-        }
+    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light-blue/main.css">
+    <script src="https://js.arcgis.com/4.15/"></script>
 
-        exports.initMap = initMap;
-        })((this.window = this.window || {}));
-    </script>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="viewDiv"></div>
   </body>
+  <script src="src/arc-gis-helper.js"></script>
+  <script src="src/arc-gis.js"></script>
 </html>
